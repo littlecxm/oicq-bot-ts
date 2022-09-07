@@ -1,0 +1,13 @@
+{
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

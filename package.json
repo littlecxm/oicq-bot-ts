@@ -1,0 +1,38 @@
+{
+  "name": "oicq-bot-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "packageManager": "pnpm@7.9.3",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env nodemon --watch 'src/**/*' -e ts,tsx --exec 'node' --loader @esbuild-kit/esm-loader ./src/index.ts",
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "prettier": "prettier --write ./src/**/*.{ts,js,css,html}"
+  },
+  "author": "littlecxm",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4",
+    "dotenv": "^16.0.1",
+    "inquirer": "^9.1.1",
+    "lodash-es": "^4.17.21",
+    "log4js": "^6.6.1",
+    "node-fetch": "^3.2.10",
+    "oicq": "^2.3.1"
+  },
+  "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.4.2",
+    "@types/inquirer": "^9.0.1",
+    "@types/lodash": "^4.14.184",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^18.0.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.14.47",
+    "nodemon": "^2.0.18",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}
