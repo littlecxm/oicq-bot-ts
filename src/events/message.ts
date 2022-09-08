@@ -2,9 +2,9 @@ import {
   DiscussMessageEvent,
   GroupMessageEvent,
   PrivateMessageEvent,
-} from 'oicq/lib/events';
-import EventListener from '../listener/events';
-import logger from '../utils/logger';
+} from 'oicq/lib/events.js';
+import EventListener from '../listener/events.js';
+import logger from '../utils/logger.js';
 
 export default class MessageEvent extends EventListener {
   constructor() {

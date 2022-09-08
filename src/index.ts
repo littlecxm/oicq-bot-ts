@@ -1,9 +1,9 @@
 import 'dotenv/config';
 import { createClient } from 'oicq';
-import { botConfig, qqNumber, qqPwd } from './config';
-import listener from './listener';
-import { sleep } from './utils';
-import logger from './utils/logger';
+import { botConfig, qqNumber, qqPwd } from './config/index.js';
+import listener from './listener/index.js';
+import { sleep } from './utils/index.js';
+import logger from './utils/logger.js';
 
 process.on('unhandledRejection', (error, promise) => {
   let err = error;

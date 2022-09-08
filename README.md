@@ -2,7 +2,7 @@
 
 ## 介绍
 
-基于 [oicq](https://github.com/takayama-lily/oicq)的 TypeScript 版 bot 模板
+基于 [oicq](https://github.com/takayama-lily/oicq) 的 TypeScript 版 bot 模板
 
 ## 需求
 

@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "cross-env nodemon --watch 'src/**/*' -e ts,tsx --exec 'node' --loader @esbuild-kit/esm-loader ./src/index.ts",
     "build": "tsc",
+    "prod": "tsc && node ./bin/index.js",
     "check": "tsc --noEmit",
     "prettier": "prettier --write ./src/**/*.{ts,js,css,html}"
   },
@@ -33,6 +34,6 @@
     "nodemon": "^2.0.18",
     "prettier": "^2.7.1",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.0"
   }
 }

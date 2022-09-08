@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { isArray } from 'lodash-es';
 import { Client } from 'oicq';
-import logger from '../utils/logger';
+import logger from '../utils/logger.js';
 
 class ListenerLoader {
   client: Client;
@@ -14,7 +14,7 @@ class ListenerLoader {
 
     const files = fs
       .readdirSync('./src/events')
-      .filter((file) => file.endsWith('.ts'));
+      .filter((file) => file.endsWith('.js'));
 
     for (let File of files) {
       try {

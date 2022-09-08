@@ -1,5 +1,5 @@
-import EventListener from '../listener/events';
-import logger from '../utils/logger';
+import EventListener from '../listener/events.js';
+import logger from '../utils/logger.js';
 
 /**
  * 监听请求事件

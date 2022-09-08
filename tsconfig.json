@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["es2017", "esnext.asynciterable"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "lib": ["es2017", "esnext.asynciterable", "DOM"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "outDir": "./bin/",
     "strictNullChecks": true,
+    "isolatedModules": true,
+    "noImplicitThis": true,
     "target": "esnext",
     "typeRoots": ["./node_modules/@types", "./types"],
     "resolveJsonModule": true,

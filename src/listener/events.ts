@@ -1,4 +1,4 @@
-import { EventMap } from 'oicq/lib/events';
+import { EventMap } from 'oicq/lib/events.js';
 
 type Prefix = string | null;
 type Event = string | Array<string>;

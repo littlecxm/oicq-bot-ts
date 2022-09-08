@@ -1,9 +1,9 @@
 import inquirer from 'inquirer';
 import { Client } from 'oicq';
 import { trim } from 'lodash-es';
-import EventListener from '../listener/events';
-import { sleep } from '../utils';
-import logger from '../utils/logger';
+import EventListener from '../listener/events.js';
+import { sleep } from '../utils/index.js';
+import logger from '../utils/logger.js';
 import fetch from 'node-fetch';
 
 export default class LoginHandler extends EventListener {
