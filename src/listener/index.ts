@@ -1,7 +1,14 @@
 import fs from 'node:fs';
 import { isArray } from 'lodash-es';
 import { Client } from 'oicq';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { dirname } from 'path';
 import logger from '../utils/logger.js';
+import { isDev } from '../utils/env.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 class ListenerLoader {
   client: Client;
@@ -12,10 +19,18 @@ class ListenerLoader {
   async load(client: Client) {
     this.client = client;
 
-    const files = fs
-      .readdirSync('./src/events')
-      .filter((file) => file.endsWith('.js'));
+    let files: string[] = [];
+    if (isDev()) {
+      files = fs
+        .readdirSync('./src/events')
+        .filter((file) => file.endsWith('.ts'));
+    } else {
+      files = fs
+        .readdirSync(path.resolve(__dirname, '../events'))
+        .filter((file) => file.endsWith('.js'));
+    }
 
+    logger.mark(`加载event模块：${files}`);
     for (let File of files) {
       try {
         let listener = await import(`../events/${File}`);
