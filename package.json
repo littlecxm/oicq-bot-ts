@@ -6,7 +6,7 @@
   "packageManager": "pnpm@7.9.3",
   "type": "module",
   "scripts": {
-    "dev": "cross-env nodemon --watch 'src/**/*' -e ts,tsx --exec 'node' --loader @esbuild-kit/esm-loader ./src/index.ts",
+    "dev": "cross-env NODE_ENV=development nodemon --watch 'src/**/*' -e ts,tsx --exec 'node' --loader @esbuild-kit/esm-loader ./src/index.ts",
     "build": "tsc",
     "prod": "tsc && node ./bin/index.js",
     "check": "tsc --noEmit",

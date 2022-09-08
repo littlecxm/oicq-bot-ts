@@ -1,8 +1,16 @@
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const envFilePath = path.resolve(__dirname, '.env');
+
+export function isDev(): boolean {
+  return process.env.NODE_ENV === 'development';
+}
 
 // read .env file & convert to array
 const readEnvVars = () => fs.readFileSync(envFilePath, 'utf-8').split(os.EOL);
